@@ -1,4 +1,4 @@
-
+import { Suspense } from "react";
 
 import clientPromise from "@/lib/mongodb";
 
@@ -11,7 +11,7 @@ type Project = {
   demoUrl: string;
 };
 
-export default async function Home() {
+async function HomeContent() {
   let projects: Project[] = [];
 
   try {
@@ -171,5 +171,19 @@ export default async function Home() {
         © 2026 Ryan. Built with Next.js and MongoDB.
       </footer>
     </main>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense
+      fallback={
+        <main className="min-h-screen bg-[#09090b] p-10 text-white">
+          포트폴리오를 불러오는 중...
+        </main>
+      }
+    >
+      <HomeContent />
+    </Suspense>
   );
 }
