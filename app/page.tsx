@@ -158,9 +158,9 @@ async function HomeContent() {
 
       <section id="contact" className="mx-auto max-w-6xl px-6 py-16">
         <p className="font-mono text-sm text-cyan-400">03 / CONTACT</p>
-        <h2 className="mt-3 text-3xl font-bold">Let&apos;s connect.</h2>
+        <h2 className="mt-3 text-3xl font-bold">추가 정보</h2>
         <a
-          href="https://github.com/"
+          href="https://github.com/hryaning"
           target="_blank"
           rel="noreferrer"
           className="mt-6 inline-block text-cyan-400 hover:underline"
@@ -181,7 +181,7 @@ export default function Home() {
     <Suspense
       fallback={
         <main className="min-h-screen bg-[#09090b] p-10 text-white">
-          포트폴리오를 불러오는 중...
+          불러오는중...
         </main>
       }
     >
